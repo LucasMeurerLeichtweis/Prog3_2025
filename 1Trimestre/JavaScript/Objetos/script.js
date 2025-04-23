@@ -55,8 +55,18 @@ times.forEach(function(time){
     lista_times.appendChild(li);
 });
 
-const tres = document.getElementById("times_3_libertadores");      
-let tri = times.filter(p => p.libertadores > 2);
+const tres = document.getElementById("times_3_libertadores");
+   
+
+
+
+
+let tri = times.filter(time => time.libertadores > 2);
+
+
+
+
+
 tri.forEach(function(time){
     lista_tri = document.getElementById("times_3_libertadores");
     const li = document.createElement("li")
@@ -73,14 +83,52 @@ preços = [
     {alimento:"Manteiga",preço:3.29,status:"perecível"},
 ]
 
-let total_perecivel = preços
+
+
+
+
+
+let  totalPerecíveis10 = preços
+                            .filter(produto=>produto.status=="perecível")
+                            .map(produto=>produto.preço*0.9)
+                            .reduce((total,preço) => total+preço,0)
+
+console.log(`O valor total é de R$${totalPerecíveis10.toFixed(2)}`)
+
+
+
+
+
+
+/*const valor_perecíveis = preços
+                        .filter(produto=>produto.status=="perecível")
+                        .map(produto => produto.preço*0.5)
+                        .reduce((total,preço) => total+preço,0)
+console.log(`O valor total é de R$${valor_perecíveis.toFixed(2)}`);
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*let total_perecivel = preços
     .filter(produto=>produto.status=="perecível")
     .map(produto=>produto.preço*1.10)
     .reduce((total,produto) => total+produto,0)
 console.log(`Produtos perecíveis: R$ ${total_perecivel.toFixed(2)}`)
+<<<<<<< HEAD
 
 let total_perecivel_desc = preços
     .filter(produto=>produto.status=="perecível")
     .map(produto=>produto.preço*0.9)
     .reduce((total,preço)=> total+preço,0)
     console.log(`Produtos perecíveis com desconto: R$ ${total_perecivel_desc.toFixed(2)}`)
+=======
+*/
+>>>>>>> d32bd8dbaf9b75067513eddcbc54e541d9bb51c3
