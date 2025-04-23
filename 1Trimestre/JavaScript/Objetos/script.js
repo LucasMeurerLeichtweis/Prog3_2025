@@ -79,3 +79,8 @@ let total_perecivel = preços
     .reduce((total,produto) => total+produto,0)
 console.log(`Produtos perecíveis: R$ ${total_perecivel.toFixed(2)}`)
 
+let total_perecivel_desc = preços
+    .filter(produto=>produto.status=="perecível")
+    .map(produto=>produto.preço*0.9)
+    .reduce((total,preço)=> total+preço,0)
+    console.log(`Produtos perecíveis com desconto: R$ ${total_perecivel_desc.toFixed(2)}`)
