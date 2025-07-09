@@ -3,11 +3,15 @@
 class Cachorro{
 
 
-    public function __construct(private string $nome = "", private string $raça = ""){
+    public function __construct(private string $nome = "", private string $raça = "", private float $peso = 0){
     }
 
     public function latir():string{
         return "Au Au Au";
+    }
+
+    public function getPeso():float{
+        return $this->peso;
     }
 
     public function getNome():string{

@@ -1,0 +1,15 @@
+{
+    "name": "lucas.leichtweis/heranca2",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LucasMeurerLeichtweis",
+            "email": "lucas.leichtweis@aluno.feliz.ifrs.edu.br"
+        }
+    ],
+    "require": {}
+}
