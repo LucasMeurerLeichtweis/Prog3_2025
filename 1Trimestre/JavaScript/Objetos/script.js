@@ -122,4 +122,13 @@ console.log(`O valor total é de R$${valor_perecíveis.toFixed(2)}`);
     .map(produto=>produto.preço*1.10)
     .reduce((total,produto) => total+produto,0)
 console.log(`Produtos perecíveis: R$ ${total_perecivel.toFixed(2)}`)
+<<<<<<< HEAD
+
+let total_perecivel_desc = preços
+    .filter(produto=>produto.status=="perecível")
+    .map(produto=>produto.preço*0.9)
+    .reduce((total,preço)=> total+preço,0)
+    console.log(`Produtos perecíveis com desconto: R$ ${total_perecivel_desc.toFixed(2)}`)
+=======
 */
+>>>>>>> d32bd8dbaf9b75067513eddcbc54e541d9bb51c3
